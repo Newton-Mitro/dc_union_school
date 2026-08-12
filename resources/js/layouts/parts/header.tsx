@@ -215,9 +215,8 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                     <button
                                         type="button"
                                         className={navLinkClass(
-                                            isActive('history') ||
-                                                isActive('vision') ||
-                                                isActive('moto') ||
+                                            isActive('about') ||
+                                                isActive('history') ||
                                                 isActive('gallery'),
                                         )}
                                     >
@@ -241,34 +240,6 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                                 >
                                                     <i className="fas fa-history w-4 text-center text-xs text-primary" />
                                                     <span>ইতিহাস</span>
-                                                </Link>
-                                            </li>
-
-                                            <li>
-                                                <Link
-                                                    href="/vision"
-                                                    className={
-                                                        dropdownItemClass
-                                                    }
-                                                >
-                                                    <i className="fas fa-bullseye w-4 text-center text-xs text-primary" />
-
-                                                    <span>
-                                                        লক্ষ্য এবং উদ্দেশ্য
-                                                    </span>
-                                                </Link>
-                                            </li>
-
-                                            <li>
-                                                <Link
-                                                    href="/moto"
-                                                    className={
-                                                        dropdownItemClass
-                                                    }
-                                                >
-                                                    <i className="fas fa-heart w-4 text-center text-xs text-primary" />
-
-                                                    <span>মূল্যবোধ</span>
                                                 </Link>
                                             </li>
 

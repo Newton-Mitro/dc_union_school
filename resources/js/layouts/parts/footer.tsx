@@ -114,7 +114,7 @@ function Footer() {
                     <div className="text-center md:text-left">
                         <h3 className="mb-4 text-base font-bold">যোগাযোগ</h3>
 
-                        <div className="flex flex-col gap-4 text-sm text-card-foreground/80">
+                        <div className="flex flex-col gap-1 text-sm text-card-foreground/80">
                             {/* Address */}
                             <div className="flex items-start justify-center gap-3 md:justify-start">
                                 <i className="fas fa-map-marker-alt mt-1 w-4 text-center text-orange-500" />
@@ -195,21 +195,21 @@ function Footer() {
                     </p>
 
                     {/* Developer */}
-                    <p className="mt-2 text-xs text-card-foreground/70">
-                        Developed by
+                    <p className="mt-1 text-xs text-card-foreground/70">
+                        Developed by{' '}
                         <a
                             href="https://www.facebook.com/profile.php?id=61592730722204"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="font-semibold text-primary transition hover:underline"
                         >
-                            Quantum Labs
+                            Quantum Labs{' '}
                         </a>
                         Team
                     </p>
 
                     {/* Webmaster */}
-                    <div className="mt-3">
+                    <div className="mt-2">
                         <Link
                             href="/login"
                             className="text-xs text-card-foreground/70 transition hover:font-semibold hover:text-primary hover:underline"

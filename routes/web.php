@@ -12,6 +12,10 @@ Route::get('/about', function () {
     return Inertia::render('about-page');
 })->name('about');
 
+Route::get('/institution-teaching-permission', function () {
+    return Inertia::render('institution-teaching-permission-page');
+})->name('institution-teaching-permission');
+
 Route::get('/science-lab', function () {
     return Inertia::render('science-lab-page');
 })->name('science-lab');
@@ -51,6 +55,14 @@ Route::get('/indoor-games', function () {
 Route::get('/admission-info', function () {
     return Inertia::render('admission-info-page');
 })->name('admission-info');
+
+Route::get('/admission-results', function () {
+    return Inertia::render('admission-results-page');
+})->name('admission-results');
+
+Route::get('/admission-forms', function () {
+    return Inertia::render('admission-forms-page');
+})->name('admission-forms');
 
 Route::get('/governing-body', function () {
     return Inertia::render('governing-body-page');
