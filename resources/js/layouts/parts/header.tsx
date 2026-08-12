@@ -492,11 +492,7 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                                 isActive(
                                                     'examination-schedule',
                                                 ) ||
-                                                isActive('syllabus') ||
                                                 isActive('class-routine') ||
-                                                isActive(
-                                                    'class-test-routine',
-                                                ) ||
                                                 isActive('notices') ||
                                                 isActive('events'),
                                         )}
@@ -542,19 +538,6 @@ function Header({ scrollFromTop = false }: HeaderProps) {
 
                                             <li>
                                                 <Link
-                                                    href="/syllabus"
-                                                    className={
-                                                        dropdownItemClass
-                                                    }
-                                                >
-                                                    <i className="fas fa-book-open w-4 text-center text-xs text-green-600" />
-
-                                                    <span>পাঠ্যসূচি</span>
-                                                </Link>
-                                            </li>
-
-                                            <li>
-                                                <Link
                                                     href="/class-routine"
                                                     className={
                                                         dropdownItemClass
@@ -563,21 +546,6 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                                     <i className="fas fa-calendar-check w-4 text-center text-xs text-primary" />
 
                                                     <span>ক্লাস রুটিন</span>
-                                                </Link>
-                                            </li>
-
-                                            <li>
-                                                <Link
-                                                    href="/class-test-routine"
-                                                    className={
-                                                        dropdownItemClass
-                                                    }
-                                                >
-                                                    <i className="fas fa-clipboard-list w-4 text-center text-xs text-orange-500" />
-
-                                                    <span>
-                                                        ক্লাস টেস্ট রুটিন
-                                                    </span>
                                                 </Link>
                                             </li>
 
@@ -753,9 +721,8 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                             toggleMobileDropdown('about')
                                         }
                                         className={`flex w-full items-center justify-between gap-3 rounded-lg px-4 py-3 text-sm transition-colors hover:bg-primary/10 hover:text-primary ${
+                                            isActive('about') ||
                                             isActive('history') ||
-                                            isActive('vision') ||
-                                            isActive('moto') ||
                                             isActive('gallery')
                                                 ? 'font-semibold text-primary'
                                                 : 'text-foreground'
@@ -785,26 +752,6 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                             >
                                                 <i className="fas fa-history w-5 text-center text-primary" />
                                                 <span>ইতিহাস</span>
-                                            </Link>
-
-                                            <Link
-                                                href="/vision"
-                                                onClick={closeMobileMenu}
-                                                className="flex items-center gap-3 px-4 py-3 text-sm text-foreground hover:text-primary"
-                                            >
-                                                <i className="fas fa-bullseye w-5 text-center text-primary" />
-
-                                                <span>লক্ষ্য এবং উদ্দেশ্য</span>
-                                            </Link>
-
-                                            <Link
-                                                href="/moto"
-                                                onClick={closeMobileMenu}
-                                                className="flex items-center gap-3 px-4 py-3 text-sm text-foreground hover:text-primary"
-                                            >
-                                                <i className="fas fa-heart w-5 text-center text-primary" />
-
-                                                <span>মূল্যবোধ</span>
                                             </Link>
 
                                             <Link
@@ -1022,9 +969,7 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                         className={`flex w-full items-center justify-between gap-3 rounded-lg px-4 py-3 text-sm hover:bg-primary/10 hover:text-primary ${
                                             isActive('book-list') ||
                                             isActive('examination-schedule') ||
-                                            isActive('syllabus') ||
                                             isActive('class-routine') ||
-                                            isActive('class-test-routine') ||
                                             isActive('notices') ||
                                             isActive('events')
                                                 ? 'font-semibold text-primary'
@@ -1067,30 +1012,12 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                             </Link>
 
                                             <Link
-                                                href="/syllabus"
-                                                onClick={closeMobileMenu}
-                                                className="flex items-center gap-3 px-4 py-3 text-sm hover:text-primary"
-                                            >
-                                                <i className="fas fa-book-open w-5 text-center text-green-600" />
-                                                <span>পাঠ্যসূচি</span>
-                                            </Link>
-
-                                            <Link
                                                 href="/class-routine"
                                                 onClick={closeMobileMenu}
                                                 className="flex items-center gap-3 px-4 py-3 text-sm hover:text-primary"
                                             >
                                                 <i className="fas fa-calendar-check w-5 text-center text-primary" />
                                                 <span>ক্লাস রুটিন</span>
-                                            </Link>
-
-                                            <Link
-                                                href="/class-test-routine"
-                                                onClick={closeMobileMenu}
-                                                className="flex items-center gap-3 px-4 py-3 text-sm hover:text-primary"
-                                            >
-                                                <i className="fas fa-clipboard-list w-5 text-center text-orange-500" />
-                                                <span>ক্লাস টেস্ট রুটিন</span>
                                             </Link>
 
                                             <Link

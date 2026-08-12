@@ -84,7 +84,7 @@ export default function PageHeader({
 
                     {/* Subtitle */}
                     {subtitle && (
-                        <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/75 sm:text-base">
+                        <p className="mx-auto mt-4 max-w-4xl text-sm leading-7 text-white/75 sm:text-base">
                             {subtitle}
                         </p>
                     )}
