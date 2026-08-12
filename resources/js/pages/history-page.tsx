@@ -56,8 +56,22 @@ export default function History() {
 
             <main className="min-h-screen bg-background text-foreground">
                 <PageHeader
-                    page_title={'আমাদের ইতিহাস'}
-                    page_subtitle={`ঢাকা ক্রেডিট ইউনিয়ন স্কুলের প্রতিষ্ঠা, বিকাশ এবং শিক্ষা কার্যক্রমের দীর্ঘ পথচলা।`}
+                    breadcrumbs={[
+                        {
+                            label: 'হোম',
+                            href: '/',
+                        },
+                        {
+                            label: 'আমাদের সম্পর্কে',
+                        },
+                        {
+                            label: 'আমাদের ইতিহাস',
+                        },
+                    ]}
+                    categoryIcon="fas fa-images"
+                    category="আমাদের সম্পর্কে"
+                    title="আমাদের ইতিহাস"
+                    subtitle={`ঢাকা ক্রেডিট ইউনিয়ন স্কুলের প্রতিষ্ঠা, বিকাশ এবং শিক্ষা কার্যক্রমের দীর্ঘ পথচলা।`}
                 />
 
                 {/* =====================================================

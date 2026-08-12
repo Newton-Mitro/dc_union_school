@@ -1,5 +1,6 @@
 import { Head } from '@inertiajs/react';
 import { useMemo, useState } from 'react';
+import PageHeader from '../components/page-header';
 
 type Book = {
     id: number;
@@ -178,30 +179,24 @@ export default function BookList() {
             <Head title="বই এর তালিকা" />
 
             <main className="min-h-screen bg-background text-foreground">
-                {/* =====================================================
-                    PAGE HEADER
-                ====================================================== */}
-                <section className="relative overflow-hidden bg-primary text-primary-foreground">
-                    <div className="absolute inset-0 bg-black/10" />
-
-                    <div className="relative container mx-auto px-4 py-14 sm:py-16 md:py-20">
-                        <div className="mx-auto max-w-3xl text-center">
-                            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-4 py-2 text-sm font-medium backdrop-blur-sm">
-                                <i className="fas fa-book" />
-                                একাডেমিক
-                            </span>
-
-                            <h1 className="text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
-                                বই এর তালিকা
-                            </h1>
-
-                            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-primary-foreground/85 sm:text-base">
-                                শ্রেণি ও বিষয়ভিত্তিক পাঠ্যবইয়ের তালিকা এবং
-                                প্রয়োজনীয় তথ্য।
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                <PageHeader
+                    breadcrumbs={[
+                        {
+                            label: 'হোম',
+                            href: '/',
+                        },
+                        {
+                            label: 'একাডেমিক',
+                        },
+                        {
+                            label: 'বই এর তালিকা',
+                        },
+                    ]}
+                    categoryIcon="fas fa-book"
+                    category="একাডেমিক"
+                    title="বই এর তালিকা"
+                    subtitle={`শ্রেণি ও বিষয়ভিত্তিক পাঠ্যবইয়ের তালিকা এবং প্রয়োজনীয় তথ্য।`}
+                />
 
                 {/* =====================================================
                     INTRODUCTION

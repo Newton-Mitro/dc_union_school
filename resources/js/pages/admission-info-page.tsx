@@ -1,4 +1,5 @@
 import { Head, Link } from '@inertiajs/react';
+import PageHeader from '../components/page-header';
 
 export default function AdmissionInfo() {
     const admissionSteps = [
@@ -70,30 +71,24 @@ export default function AdmissionInfo() {
             <Head title="ভর্তি তথ্য" />
 
             <main className="min-h-screen bg-background text-foreground">
-                {/* =====================================================
-                    PAGE HEADER
-                ====================================================== */}
-                <section className="relative overflow-hidden bg-primary text-primary-foreground">
-                    <div className="absolute inset-0 bg-black/10" />
-
-                    <div className="relative container mx-auto px-4 py-14 sm:py-16 md:py-20">
-                        <div className="mx-auto max-w-3xl text-center">
-                            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-4 py-2 text-sm font-medium backdrop-blur-sm">
-                                <i className="fas fa-user-plus" />
-                                ভর্তি সম্পর্কিত
-                            </span>
-
-                            <h1 className="text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
-                                ভর্তি তথ্য
-                            </h1>
-
-                            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-primary-foreground/85 sm:text-base">
-                                ঢাকা ক্রেডিট ইউনিয়ন স্কুলে ভর্তি সংক্রান্ত
-                                প্রয়োজনীয় তথ্য, নিয়মাবলি ও ভর্তি প্রক্রিয়া।
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                <PageHeader
+                    breadcrumbs={[
+                        {
+                            label: 'হোম',
+                            href: '/',
+                        },
+                        {
+                            label: 'ভর্তি সম্পর্কিত',
+                        },
+                        {
+                            label: 'ভর্তি তথ্য',
+                        },
+                    ]}
+                    categoryIcon="fas fa-user-plus"
+                    category="ভর্তি সম্পর্কিত"
+                    title="ভর্তি তথ্য"
+                    subtitle={`ঢাকা ক্রেডিট ইউনিয়ন স্কুলে ভর্তি সংক্রান্ত প্রয়োজনীয় তথ্য, নিয়মাবলি ও ভর্তি প্রক্রিয়া।`}
+                />
 
                 {/* =====================================================
                     INTRODUCTION

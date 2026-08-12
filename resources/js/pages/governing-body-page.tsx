@@ -1,4 +1,5 @@
 import { Head, Link } from '@inertiajs/react';
+import PageHeader from '../components/page-header';
 
 interface CommitteeMember {
     name: string;
@@ -91,30 +92,24 @@ export default function GoverningBody() {
             <Head title="ম্যানেজিং কমিটি" />
 
             <main className="min-h-screen bg-background text-foreground">
-                {/* =====================================================
-                    PAGE HEADER
-                ====================================================== */}
-                <section className="relative overflow-hidden bg-primary text-primary-foreground">
-                    <div className="absolute inset-0 bg-black/10" />
-
-                    <div className="relative container mx-auto px-4 py-14 sm:py-16 md:py-20">
-                        <div className="mx-auto max-w-3xl text-center">
-                            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-4 py-2 text-sm font-medium backdrop-blur-sm">
-                                <i className="fas fa-landmark" />
-                                অফিসিয়াল
-                            </span>
-
-                            <h1 className="text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
-                                ম্যানেজিং কমিটি
-                            </h1>
-
-                            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-primary-foreground/85 sm:text-base">
-                                বিদ্যালয়ের সার্বিক পরিচালনা, উন্নয়ন ও শিক্ষার
-                                মানোন্নয়নে দায়িত্বশীল ম্যানেজিং কমিটি।
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                <PageHeader
+                    breadcrumbs={[
+                        {
+                            label: 'হোম',
+                            href: '/',
+                        },
+                        {
+                            label: 'অফিসিয়াল',
+                        },
+                        {
+                            label: 'ম্যানেজিং কমিটি',
+                        },
+                    ]}
+                    categoryIcon="fas fa-landmark"
+                    category="অফিসিয়াল"
+                    title="ম্যানেজিং কমিটি"
+                    subtitle={`বিদ্যালয়ের সার্বিক পরিচালনা, উন্নয়ন ও শিক্ষার মানোন্নয়নে দায়িত্বশীল ম্যানেজিং কমিটি।`}
+                />
 
                 {/* =====================================================
                     INTRODUCTION

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
 @import 'tailwindcss';
 
 @import 'tw-animate-css';
@@ -9,9 +11,13 @@
 
 @theme {
     --font-sans:
-        'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Hind Siliguri', 'Instrument Sans', ui-sans-serif, system-ui,
+        sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
+
+    --font-bangla: 'Hind Siliguri', sans-serif;
+
+    --font-bangla-heading: 'Baloo Da 2', 'Hind Siliguri', sans-serif;
 
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
@@ -244,8 +250,18 @@
         @apply border-border;
     }
 
+    html {
+        font-family:
+            'Hind Siliguri', 'Instrument Sans', ui-sans-serif, system-ui,
+            sans-serif;
+    }
+
     body {
         @apply bg-background text-foreground;
+
+        font-family:
+            'Hind Siliguri', 'Instrument Sans', ui-sans-serif, system-ui,
+            sans-serif;
     }
 
     @keyframes marquee {

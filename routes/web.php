@@ -60,6 +60,10 @@ Route::get('/teachers', function () {
     return Inertia::render('teachers-page');
 })->name('teachers');
 
+Route::get('/students', function () {
+    return Inertia::render('students-page');
+})->name('students');
+
 Route::get('/staffs', function () {
     return Inertia::render('staffs-page');
 })->name('staffs');

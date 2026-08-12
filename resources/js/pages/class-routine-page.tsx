@@ -1,4 +1,5 @@
 import { Head, Link } from '@inertiajs/react';
+import PageHeader from '../components/page-header';
 
 interface RoutineItem {
     id: number;
@@ -230,30 +231,24 @@ export default function ClassRoutine() {
             <Head title="ক্লাস রুটিন" />
 
             <main className="min-h-screen bg-background text-foreground">
-                {/* =====================================================
-                    PAGE HEADER
-                ====================================================== */}
-                <section className="relative overflow-hidden bg-primary text-primary-foreground">
-                    <div className="absolute inset-0 bg-black/10" />
-
-                    <div className="relative container mx-auto px-4 py-14 sm:py-16 md:py-20">
-                        <div className="mx-auto max-w-3xl text-center">
-                            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-4 py-2 text-sm font-medium backdrop-blur-sm">
-                                <i className="fas fa-calendar-check" />
-                                একাডেমিক
-                            </span>
-
-                            <h1 className="text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
-                                ক্লাস রুটিন
-                            </h1>
-
-                            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-primary-foreground/85 sm:text-base">
-                                শিক্ষার্থীদের নিয়মিত ক্লাস, বিষয়, সময় ও কক্ষের
-                                বিস্তারিত সময়সূচী।
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                <PageHeader
+                    breadcrumbs={[
+                        {
+                            label: 'হোম',
+                            href: '/',
+                        },
+                        {
+                            label: 'একাডেমিক',
+                        },
+                        {
+                            label: 'ক্লাস রুটিন',
+                        },
+                    ]}
+                    categoryIcon="fas fa-calendar-check"
+                    category="একাডেমিক"
+                    title="ক্লাস রুটিন"
+                    subtitle={`শিক্ষার্থীদের নিয়মিত ক্লাস, বিষয়, সময় ও কক্ষের বিস্তারিত সময়সূচী।`}
+                />
 
                 {/* =====================================================
                     INTRODUCTION

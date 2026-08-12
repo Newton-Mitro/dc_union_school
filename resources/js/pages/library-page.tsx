@@ -1,4 +1,5 @@
 import { Head, Link } from '@inertiajs/react';
+import PageHeader from '../components/page-header';
 
 interface LibraryFeature {
     title: string;
@@ -81,30 +82,24 @@ export default function Library() {
             <Head title="লাইব্রেরি" />
 
             <main className="min-h-screen bg-background text-foreground">
-                {/* =====================================================
-                    PAGE HEADER
-                ====================================================== */}
-                <section className="relative overflow-hidden bg-primary text-primary-foreground">
-                    <div className="absolute inset-0 bg-black/10" />
-
-                    <div className="relative container mx-auto px-4 py-14 sm:py-16 md:py-20">
-                        <div className="mx-auto max-w-3xl text-center">
-                            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-4 py-2 text-sm font-medium backdrop-blur-sm">
-                                <i className="fas fa-book-reader" />
-                                আমাদের সুবিধাসমূহ
-                            </span>
-
-                            <h1 className="text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
-                                লাইব্রেরি
-                            </h1>
-
-                            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-primary-foreground/85 sm:text-base">
-                                জ্ঞান অনুসন্ধান, পাঠাভ্যাস ও সৃজনশীল চিন্তার
-                                বিকাশে আমাদের লাইব্রেরি।
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                <PageHeader
+                    breadcrumbs={[
+                        {
+                            label: 'হোম',
+                            href: '/',
+                        },
+                        {
+                            label: 'সুবিধাসমূহ',
+                        },
+                        {
+                            label: 'লাইব্রেরি',
+                        },
+                    ]}
+                    categoryIcon="fas fa-book-reader"
+                    category="শিক্ষার্থীদের বিনোদন"
+                    title="লাইব্রেরি"
+                    subtitle={`জ্ঞান অনুসন্ধান, পাঠাভ্যাস ও সৃজনশীল চিন্তার বিকাশে আমাদের লাইব্রেরি।`}
+                />
 
                 {/* =====================================================
                     INTRODUCTION

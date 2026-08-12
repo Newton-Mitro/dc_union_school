@@ -1,4 +1,5 @@
 import { Head, Link } from '@inertiajs/react';
+import PageHeader from '../components/page-header';
 
 interface ExamSchedule {
     id: number;
@@ -109,30 +110,24 @@ export default function ExaminationSchedule() {
             <Head title="পরীক্ষার সময়সূচী" />
 
             <main className="min-h-screen bg-background text-foreground">
-                {/* =====================================================
-                    PAGE HEADER
-                ====================================================== */}
-                <section className="relative overflow-hidden bg-primary text-primary-foreground">
-                    <div className="absolute inset-0 bg-black/10" />
-
-                    <div className="relative container mx-auto px-4 py-14 sm:py-16 md:py-20">
-                        <div className="mx-auto max-w-3xl text-center">
-                            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-4 py-2 text-sm font-medium backdrop-blur-sm">
-                                <i className="fas fa-calendar-alt" />
-                                একাডেমিক
-                            </span>
-
-                            <h1 className="text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
-                                পরীক্ষার সময়সূচী
-                            </h1>
-
-                            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-primary-foreground/85 sm:text-base">
-                                বিদ্যালয়ের বিভিন্ন শ্রেণির পরীক্ষা ও মূল্যায়নের
-                                সময়সূচী এখানে প্রকাশ করা হয়।
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                <PageHeader
+                    breadcrumbs={[
+                        {
+                            label: 'হোম',
+                            href: '/',
+                        },
+                        {
+                            label: 'একাডেমিক',
+                        },
+                        {
+                            label: 'একাডেমিক',
+                        },
+                    ]}
+                    categoryIcon="fas fa-calendar-alt"
+                    category="একাডেমিক"
+                    title="পরীক্ষার সময়সূচী"
+                    subtitle={`বিদ্যালয়ের বিভিন্ন শ্রেণির পরীক্ষা ও মূল্যায়নের সময়সূচী এখানে প্রকাশ করা হয়।`}
+                />
 
                 {/* =====================================================
                     INTRO

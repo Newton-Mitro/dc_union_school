@@ -22,12 +22,13 @@ export default function Home() {
                         <div className="w-full overflow-hidden bg-primary py-3 text-primary-foreground">
                             <div className="animate-marquee flex w-max items-center gap-12 px-8 whitespace-nowrap hover:paused">
                                 <Link
-                                    href="/notice"
+                                    href="/notices"
                                     className="flex items-center gap-2 hover:underline"
                                 >
                                     <i className="fas fa-circle text-[7px]" />
                                     <span>
-                                        সকল গুরুত্বপূর্ণ বিজ্ঞপ্তি এখানে দেখুন
+                                        বার্ষিক পরীক্ষার সময়সূচী প্রকাশ করা
+                                        হয়েছে
                                     </span>
                                 </Link>
 
@@ -36,7 +37,9 @@ export default function Home() {
                                     className="flex items-center gap-2 hover:underline"
                                 >
                                     <i className="fas fa-circle text-[7px]" />
-                                    <span>ভর্তি সংক্রান্ত তথ্য</span>
+                                    <span>
+                                        ২০২৬ শিক্ষাবর্ষের ভর্তি কার্যক্রম শুরু
+                                    </span>
                                 </Link>
 
                                 <Link
@@ -44,7 +47,34 @@ export default function Home() {
                                     className="flex items-center gap-2 hover:underline"
                                 >
                                     <i className="fas fa-circle text-[7px]" />
-                                    <span>পরীক্ষার সময়সূচী</span>
+                                    <span>
+                                        আগামী ১৫ আগস্ট জাতীয় শোক দিবস উপলক্ষে
+                                        বিশেষ কর্মসূচি
+                                    </span>
+                                </Link>
+
+                                <Link
+                                    href="/notices/4"
+                                    className="flex items-center gap-2 transition-opacity hover:underline hover:opacity-80"
+                                >
+                                    <i className="fas fa-file-alt text-xs text-accent" />
+
+                                    <span className="font-medium">
+                                        শিক্ষার্থীদের মাসিক বেতন ও অন্যান্য ফি
+                                        জমাদানের বিজ্ঞপ্তি
+                                    </span>
+                                </Link>
+
+                                <Link
+                                    href="/notices/5"
+                                    className="flex items-center gap-2 transition-opacity hover:underline hover:opacity-80"
+                                >
+                                    <i className="fas fa-users text-xs text-accent" />
+
+                                    <span className="font-medium">
+                                        অভিভাবক সমাবেশের সময়সূচী ও প্রয়োজনীয়
+                                        নির্দেশনা
+                                    </span>
                                 </Link>
                             </div>
                         </div>
@@ -288,7 +318,7 @@ export default function Home() {
 
                         {/* Notice */}
                         <Link
-                            href="/notice"
+                            href="/notices"
                             className="group rounded-2xl border border-dashed border-green-500/30 bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-green-500 hover:shadow-md"
                         >
                             <i className="fas fa-bell text-3xl text-green-600 transition-transform group-hover:scale-110" />
@@ -435,7 +465,7 @@ export default function Home() {
                                 </div>
 
                                 <Link
-                                    href="/notice"
+                                    href="/notices"
                                     className="text-sm font-semibold text-secondary hover:underline"
                                 >
                                     সকল বিজ্ঞপ্তি
@@ -446,7 +476,7 @@ export default function Home() {
                                 {[1, 2, 3, 4, 5].map((item) => (
                                     <Link
                                         key={item}
-                                        href="/notice"
+                                        href="/notices"
                                         className="flex gap-4 border-b border-dashed border-border pb-4 transition last:border-0 hover:text-secondary"
                                     >
                                         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-secondary/10 text-sm font-bold text-secondary">

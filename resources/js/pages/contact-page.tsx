@@ -9,15 +9,26 @@ export default function Contact() {
 
             <main className="bg-background text-foreground">
                 <PageHeader
-                    page_title={'যোগাযোগ করুন'}
-                    page_subtitle={`আমাদের সম্পর্কে জানতে, ভর্তি সংক্রান্ত তথ্য পেতে অথবা যেকোনো প্রয়োজনে আমাদের সাথে যোগাযোগ করুন।`}
+                    breadcrumbs={[
+                        {
+                            label: 'হোম',
+                            href: '/',
+                        },
+                        {
+                            label: 'যোগাযোগ',
+                        },
+                    ]}
+                    categoryIcon="fas fa-phone"
+                    category="ঢাকা ক্রেডিট ইউনিয়ন স্কুল"
+                    title="যোগাযোগ করুন"
+                    subtitle={`আমাদের সম্পর্কে জানতে, ভর্তি সংক্রান্ত তথ্য পেতে অথবা যেকোনো প্রয়োজনে আমাদের সাথে যোগাযোগ করুন।`}
                 />
 
                 {/* =====================================================
                     CONTACT INFORMATION
                 ====================================================== */}
                 <section className="container mx-auto px-4 py-12 sm:py-16">
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
                         {/* Address */}
                         <div className="rounded-2xl border border-border bg-card p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md">
                             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -67,6 +78,33 @@ export default function Contact() {
                             >
                                 dcschoolinfo@cccul.com
                             </a>
+                        </div>
+
+                        {/* Complaint Resolution */}
+                        <div className="rounded-2xl border border-border bg-card p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-red-500/10 text-red-600">
+                                <Phone className="h-6 w-6" />
+                            </div>
+
+                            <h2 className="mt-4 text-lg font-bold">
+                                অভিযোগ নিষ্পত্তি
+                            </h2>
+
+                            <div className="mt-3 space-y-2 text-sm text-foreground/70">
+                                <a
+                                    href="tel:01309139032"
+                                    className="block transition hover:text-primary hover:underline"
+                                >
+                                    ফোন: ০১৩০৯১৩৯০৩২
+                                </a>
+
+                                <a
+                                    href="mailto:dcschoolinfo@cccul.com"
+                                    className="block break-all transition hover:text-primary hover:underline"
+                                >
+                                    ই-মেইল: dcschoolinfo@cccul.com
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -244,7 +282,7 @@ export default function Contact() {
                             </Link>
 
                             <Link
-                                href="/notice"
+                                href="/notices"
                                 className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold transition hover:bg-primary/10 hover:text-primary"
                             >
                                 বিজ্ঞপ্তি

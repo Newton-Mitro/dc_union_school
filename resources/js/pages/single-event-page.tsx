@@ -1,4 +1,5 @@
 import { Head, Link } from '@inertiajs/react';
+import PageHeader from '../components/page-header';
 
 interface Event {
     id: number;
@@ -21,75 +22,30 @@ export default function SingleEvent({ event }: Props) {
             <Head title={event.title} />
 
             <main className="min-h-screen bg-background text-foreground">
-                {/* =====================================================
-                    PAGE HEADER
-                ====================================================== */}
-                <section className="relative overflow-hidden bg-primary text-primary-foreground">
-                    <div className="absolute inset-0 bg-black/10" />
-
-                    <div className="relative container mx-auto px-4 py-12 sm:py-16 md:py-20">
-                        <div className="mx-auto max-w-4xl text-center">
-                            {/* Breadcrumb */}
-                            <div className="mb-5 flex flex-wrap items-center justify-center gap-2 text-xs text-primary-foreground/70 sm:text-sm">
-                                <Link
-                                    href="/"
-                                    className="transition hover:text-white"
-                                >
-                                    হোম
-                                </Link>
-
-                                <i className="fas fa-chevron-right text-[9px]" />
-
-                                <Link
-                                    href="/events"
-                                    className="transition hover:text-white"
-                                >
-                                    ইভেন্ট
-                                </Link>
-
-                                <i className="fas fa-chevron-right text-[9px]" />
-
-                                <span className="text-primary-foreground/90">
-                                    বিস্তারিত
-                                </span>
-                            </div>
-
-                            {/* Category */}
-                            <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-4 py-2 text-sm font-semibold backdrop-blur-sm">
-                                <i className="fas fa-calendar-alt" />
-                                {event.category}
-                            </span>
-
-                            {/* Title */}
-                            <h1 className="mt-5 text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
-                                {event.title}
-                            </h1>
-
-                            {/* Status */}
-                            <div className="mt-5 flex justify-center">
-                                <span
-                                    className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold ${
-                                        event.isUpcoming
-                                            ? 'bg-green-500 text-white'
-                                            : 'bg-white/15 text-white'
-                                    }`}
-                                >
-                                    <span
-                                        className={`h-2 w-2 rounded-full ${
-                                            event.isUpcoming
-                                                ? 'bg-white'
-                                                : 'bg-white/60'
-                                        }`}
-                                    />
-
-                                    {event.isUpcoming
-                                        ? 'আসন্ন ইভেন্ট'
-                                        : 'ইভেন্ট সম্পন্ন হয়েছে'}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <PageHeader
+                    breadcrumbs={[
+                        {
+                            label: 'হোম',
+                            href: '/',
+                        },
+                        {
+                            label: 'ইভেন্ট',
+                            href: '/events',
+                        },
+                        {
+                            label: 'বিস্তারিত',
+                        },
+                    ]}
+                    category={event.category}
+                    categoryIcon="fas fa-calendar-alt"
+                    title={event.title}
+                    status={{
+                        label: event.isUpcoming
+                            ? 'আসন্ন ইভেন্ট'
+                            : 'ইভেন্ট সম্পন্ন হয়েছে',
+                        active: event.isUpcoming,
+                    }}
+                />
 
                 {/* =====================================================
                     EVENT DETAILS

@@ -417,7 +417,7 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                             isActive('syllabus') ||
                                             isActive('class-routine') ||
                                             isActive('class-test-routine') ||
-                                            isActive('notice') ||
+                                            isActive('notices') ||
                                             isActive('events'),
                                     )}
                                 >
@@ -484,7 +484,7 @@ function Header({ scrollFromTop = false }: HeaderProps) {
 
                                         <li>
                                             <Link
-                                                href="/notice"
+                                                href="/notices"
                                                 className={dropdownItemClass}
                                             >
                                                 <i className="fas fa-bell w-4 text-center text-xs text-yellow-500" />
@@ -884,7 +884,7 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                             isActive('syllabus') ||
                                             isActive('class-routine') ||
                                             isActive('class-test-routine') ||
-                                            isActive('notice') ||
+                                            isActive('notices') ||
                                             isActive('events')
                                                 ? 'font-semibold text-primary'
                                                 : 'text-foreground'
@@ -952,7 +952,7 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                             </Link>
 
                                             <Link
-                                                href="/notice"
+                                                href="/notices"
                                                 onClick={closeMobileMenu}
                                                 className="flex items-center gap-3 px-4 py-3 text-sm text-foreground hover:text-primary"
                                             >

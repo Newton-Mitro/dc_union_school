@@ -23,7 +23,7 @@ function Footer() {
                             <img
                                 src={myLogo}
                                 alt="ঢাকা ক্রেডিট ইউনিয়ন স্কুল logo"
-                                className="h-20 w-auto object-contain dark:brightness-0 dark:invert"
+                                className="h-20 w-auto object-contain dark:invert"
                             />
                         </Link>
 

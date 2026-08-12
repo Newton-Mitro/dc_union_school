@@ -1,4 +1,5 @@
 import { Head, Link } from '@inertiajs/react';
+import PageHeader from '../components/page-header';
 
 interface NoticeItem {
     id: number;
@@ -80,30 +81,24 @@ export default function Notice() {
             <Head title="বিজ্ঞপ্তি" />
 
             <main className="min-h-screen bg-background text-foreground">
-                {/* =====================================================
-                    PAGE HEADER
-                ====================================================== */}
-                <section className="relative overflow-hidden bg-primary text-primary-foreground">
-                    <div className="absolute inset-0 bg-black/10" />
-
-                    <div className="relative container mx-auto px-4 py-14 sm:py-16 md:py-20">
-                        <div className="mx-auto max-w-3xl text-center">
-                            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-4 py-2 text-sm font-medium backdrop-blur-sm">
-                                <i className="fas fa-bell" />
-                                একাডেমিক
-                            </span>
-
-                            <h1 className="text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
-                                বিজ্ঞপ্তি
-                            </h1>
-
-                            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-primary-foreground/85 sm:text-base">
-                                বিদ্যালয়ের সকল গুরুত্বপূর্ণ বিজ্ঞপ্তি, ঘোষণা ও
-                                তথ্য এখানে পাওয়া যাবে।
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                <PageHeader
+                    breadcrumbs={[
+                        {
+                            label: 'হোম',
+                            href: '/',
+                        },
+                        {
+                            label: 'একাডেমিক',
+                        },
+                        {
+                            label: 'বিজ্ঞপ্তি',
+                        },
+                    ]}
+                    categoryIcon="fas fa-bell"
+                    category="কার্যক্রম"
+                    title=" বিজ্ঞপ্তি"
+                    subtitle={`বিদ্যালয়ের সকল গুরুত্বপূর্ণ বিজ্ঞপ্তি, ঘোষণা ও তথ্য এখানে পাওয়া যাবে।`}
+                />
 
                 {/* =====================================================
                     CONTENT

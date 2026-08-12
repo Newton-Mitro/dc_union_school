@@ -78,41 +78,34 @@ function Header({ scrollFromTop = false }: HeaderProps) {
 
                         {/* Social */}
                         <div className="flex items-center gap-2">
-                            {/* Facebook */}
                             <a
-                                className="flex h-7 w-7 items-center justify-center rounded-full bg-[#1877F2] text-white transition hover:-translate-y-0.5 hover:opacity-80"
                                 href="https://www.facebook.com/profile.php?id=100063611891381"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Facebook"
+                                className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground transition hover:-translate-y-0.5 hover:opacity-80"
                             >
-                                <i className="fab fa-facebook-f" />
+                                <i className="fab fa-facebook-f text-sm" />
                             </a>
 
-                            {/* X */}
                             <a
-                                className="flex h-7 w-7 items-center justify-center rounded-full bg-foreground text-background transition hover:-translate-y-0.5 hover:opacity-80"
                                 href="https://x.com/dcnewsbd"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="X"
+                                className="flex h-8 w-8 items-center justify-center rounded-full bg-foreground text-background transition hover:-translate-y-0.5 hover:opacity-80"
                             >
-                                <img
-                                    src={XIcon}
-                                    alt=""
-                                    className="w-3.5 invert"
-                                />
+                                <i className="fab fa-x-twitter text-sm" />
                             </a>
 
-                            {/* YouTube */}
                             <a
-                                className="flex h-7 w-7 items-center justify-center rounded-full bg-[#FF0000] text-white transition hover:-translate-y-0.5 hover:opacity-80"
                                 href="https://www.youtube.com/@dctvbd"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="YouTube"
+                                className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-600 text-white transition hover:-translate-y-0.5 hover:opacity-80"
                             >
-                                <i className="fab fa-youtube" />
+                                <i className="fab fa-youtube text-sm" />
                             </a>
                         </div>
                     </div>
@@ -120,7 +113,10 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                     {/* =================================================
                         MAIN LOGO
                     ================================================= */}
-                    <div className="flex items-center justify-center py-3">
+                    <div className="flex items-center justify-center gap-2 py-3 text-foreground/85">
+                        <div className="font-bangla-heading text-2xl font-extrabold lg:text-4xl">
+                            ঢাকা ক্রেডিট
+                        </div>
                         <Link href="/" onClick={closeMobileMenu}>
                             <img
                                 className="h-16 w-auto object-contain sm:h-20 md:h-28 dark:invert"
@@ -128,6 +124,9 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                 alt="ঢাকা ক্রেডিট ইউনিয়ন স্কুল"
                             />
                         </Link>
+                        <div className="font-bangla-heading text-2xl font-extrabold lg:text-4xl">
+                            ইউনিয়ন স্কুল
+                        </div>
                     </div>
                 </div>
             </header>
@@ -287,6 +286,24 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                                     </span>
                                                 </Link>
                                             </li>
+
+                                            <li>
+                                                <Link
+                                                    href="/institution-teaching-permission"
+                                                    className={
+                                                        dropdownItemClass
+                                                    }
+                                                >
+                                                    <i className="fas fa-images w-4 text-center text-xs text-primary" />
+
+                                                    <span>
+                                                        প্রতিষ্টানের পাঠদানের
+                                                        অনুমতি
+                                                    </span>
+                                                </Link>
+                                            </li>
+
+                                            <li></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -509,7 +526,8 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                                 isActive(
                                                     'class-test-routine',
                                                 ) ||
-                                                isActive('notices'),
+                                                isActive('notices') ||
+                                                isActive('events'),
                                         )}
                                     >
                                         <i
@@ -612,9 +630,20 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                                         dropdownItemClass
                                                     }
                                                 >
-                                                    <i className="fas fa-bell w-4 text-center text-xs text-yellow-500" />
-
+                                                    <i className="fas fa-calendar-alt w-4 text-center text-xs text-primary" />
                                                     <span>ইভেন্টস</span>
+                                                </Link>
+                                            </li>
+
+                                            <li>
+                                                <Link
+                                                    href="/students"
+                                                    className={
+                                                        dropdownItemClass
+                                                    }
+                                                >
+                                                    <i className="fas fa-user-graduate w-4 text-center text-xs text-green-600" />
+                                                    <span>শিক্ষার্থী</span>
                                                 </Link>
                                             </li>
                                         </ul>
@@ -1025,7 +1054,8 @@ function Header({ scrollFromTop = false }: HeaderProps) {
                                             isActive('syllabus') ||
                                             isActive('class-routine') ||
                                             isActive('class-test-routine') ||
-                                            isActive('notices')
+                                            isActive('notices') ||
+                                            isActive('events')
                                                 ? 'font-semibold text-primary'
                                                 : 'text-foreground'
                                         }`}
